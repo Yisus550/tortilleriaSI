@@ -131,7 +131,7 @@ public class tblEmpleado extends javax.swing.JFrame {
         jPanel1.add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 209, -1));
 
         jLabel2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jLabel2.setText("Ingrese identificador:");
+        jLabel2.setText("Buscar ID de empleado:");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, -1, -1));
 
         txtContraseña.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
@@ -180,7 +180,7 @@ public class tblEmpleado extends javax.swing.JFrame {
                 txtIdentificadorKeyTyped(evt);
             }
         });
-        jPanel1.add(txtIdentificador, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 130, -1));
+        jPanel1.add(txtIdentificador, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 150, -1));
 
         jLabel9.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel9.setText("Nombres: ");
@@ -206,7 +206,7 @@ public class tblEmpleado extends javax.swing.JFrame {
                 btnBuscarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 70, 70, 30));
+        jPanel1.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 70, 80, 30));
 
         btnEditar.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnEditar.setText("Editar");
@@ -215,7 +215,7 @@ public class tblEmpleado extends javax.swing.JFrame {
                 btnEditarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 70, 70, 30));
+        jPanel1.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 70, 80, 30));
 
         btnCancelar.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnCancelar.setText("Cancelar");
@@ -250,7 +250,7 @@ public class tblEmpleado extends javax.swing.JFrame {
             .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
         );
 
-        MRegresar.setText("File");
+        MRegresar.setText("Menú");
 
         MTablauser.setText("Ingresar usuario");
         MTablauser.addActionListener(new java.awt.event.ActionListener() {
