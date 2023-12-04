@@ -88,8 +88,8 @@
               <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
               <Component id="btnListo" min="-2" pref="105" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="btnGuardar" min="-2" pref="100" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="164" max="-2" attributes="0"/>
+              <Component id="btnGuardar" min="-2" pref="113" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="151" max="-2" attributes="0"/>
           </Group>
           <Component id="jSeparator1" alignment="0" max="32767" attributes="0"/>
           <Group type="102" alignment="0" attributes="0">
