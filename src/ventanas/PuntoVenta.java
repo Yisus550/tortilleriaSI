@@ -37,8 +37,6 @@ public class PuntoVenta extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        txtPrecio = new javax.swing.JTextField();
-        txtProducto = new javax.swing.JTextField();
         txtPago = new javax.swing.JTextField();
         txtTotal = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
@@ -55,6 +53,8 @@ public class PuntoVenta extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
+        productoCB = new javax.swing.JComboBox<>();
+        tortillaCB = new javax.swing.JComboBox<>();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -66,29 +66,10 @@ public class PuntoVenta extends javax.swing.JFrame {
         jLabel1.setText("Producto:");
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel2.setText("Precio:");
+        jLabel2.setText("Tipo de tortilla:");
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel3.setText("Paga con:");
-
-        txtPrecio.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        txtPrecio.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtPrecioKeyTyped(evt);
-            }
-        });
-
-        txtProducto.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        txtProducto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtProductoActionPerformed(evt);
-            }
-        });
-        txtProducto.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtProductoKeyTyped(evt);
-            }
-        });
 
         txtPago.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         txtPago.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -143,6 +124,12 @@ public class PuntoVenta extends javax.swing.JFrame {
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/WhatsApp Image 2023-11-16 at 11. (1).jpg"))); // NOI18N
 
+        productoCB.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        productoCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60" }));
+
+        tortillaCB.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        tortillaCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Harina", "Maiz" }));
+
         jMenu1.setText("Opciones");
 
         jMenuItem1.setText("Mostrar tabla");
@@ -174,22 +161,20 @@ public class PuntoVenta extends javax.swing.JFrame {
                 .addComponent(jLabel11)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addGap(12, 12, 12)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(108, 108, 108)
+                        .addComponent(productoCB, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(120, 120, 120)
                         .addComponent(jLabel9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(tortillaCB, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
                         .addComponent(jLabel10)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(147, 147, 147)))
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel2)
+                        .addGap(95, 95, 95)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addComponent(txtPago, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -245,16 +230,15 @@ public class PuntoVenta extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel2)
                         .addComponent(jLabel3)))
-                .addGap(6, 6, 6)
+                .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabel11)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel11))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9))
-                        .addComponent(txtPago, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel9)
+                            .addComponent(tortillaCB, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE))
+                        .addComponent(txtPago, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(productoCB))
                     .addComponent(jLabel10))
                 .addGap(70, 70, 70)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -271,7 +255,7 @@ public class PuntoVenta extends javax.swing.JFrame {
                         .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(41, 41, 41)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGuardar)
                     .addComponent(btnListo))
@@ -288,15 +272,18 @@ public class PuntoVenta extends javax.swing.JFrame {
         this.hide();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void txtProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtProductoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtProductoActionPerformed
-
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         // TODO add your handling code here:
         double Kilo, precio, canti, montoT;
-        Kilo = Double.parseDouble(txtProducto.getText());
-        precio = Double.parseDouble(txtPrecio.getText());
+        String kiloString = (String) productoCB.getSelectedItem();
+        String tipoTortilla = (String) tortillaCB.getSelectedItem();
+        
+        Kilo = Double.parseDouble(kiloString);
+        if (tipoTortilla.equals("Harina")) {
+            precio = 20;
+        } else {
+            precio = 22;
+        }
         montoT = Double.parseDouble(txtTotal.getText());
         int num = 0;
         if (num == 0) {
@@ -310,8 +297,8 @@ public class PuntoVenta extends javax.swing.JFrame {
     }
 
     private void limpiarCampos() {
-        txtProducto.setText("");
-        txtPrecio.setText("");
+        productoCB.setSelectedIndex(0);
+        tortillaCB.setSelectedIndex(0);
         txtPago.setText("");
         txtFeria.setText("");
         txtTotal.setText("");
@@ -320,11 +307,18 @@ public class PuntoVenta extends javax.swing.JFrame {
 
     private void btnListoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListoActionPerformed
         // TODO add your handling code here:
-        double pro = Double.parseDouble(txtProducto.getText());
-        double precio = Double.parseDouble(txtPrecio.getText());
+        String kiloString = (String) productoCB.getSelectedItem();
+        double pro = Double.parseDouble(kiloString);
+        String tipoTortilla = (String) tortillaCB.getSelectedItem();
+        double precio;
+        if (tipoTortilla.equals("Harina")) {
+            precio = 20;
+        } else {
+            precio = 22;
+        }
         double pago = Double.parseDouble(txtPago.getText());
 
-        if (!(txtProducto.getText().equals(null) & txtPrecio.getText().equals(null) & txtPago.getText().equals(null))) {
+        if (!txtPago.getText().equals(null)) {
             double total = pro * precio;
 
             if (total < pago) {
@@ -343,26 +337,6 @@ public class PuntoVenta extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "no deje campos vacios");
         }
     }//GEN-LAST:event_btnListoActionPerformed
-
-    private void txtProductoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtProductoKeyTyped
-        // valida si se ingresaron letras
-        char validar = evt.getKeyChar();
-        if (Character.isLetter(validar)) {
-            getToolkit().beep();
-            evt.consume();
-            JOptionPane.showMessageDialog(null, "ingrese numeros solamente.");
-        }
-    }//GEN-LAST:event_txtProductoKeyTyped
-
-    private void txtPrecioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPrecioKeyTyped
-        // valida si se ingresaron letras
-        char validar = evt.getKeyChar();
-        if (Character.isLetter(validar)) {
-            getToolkit().beep();
-            evt.consume();
-            JOptionPane.showMessageDialog(null, "ingrese numeros solamente.");
-        }
-    }//GEN-LAST:event_txtPrecioKeyTyped
 
     private void txtPagoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPagoKeyTyped
         // valida si se ingresaron letras
@@ -437,10 +411,10 @@ public class PuntoVenta extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JComboBox<String> productoCB;
+    private javax.swing.JComboBox<String> tortillaCB;
     private javax.swing.JTextField txtFeria;
     private javax.swing.JTextField txtPago;
-    private javax.swing.JTextField txtPrecio;
-    private javax.swing.JTextField txtProducto;
     private javax.swing.JTextField txtTotal;
     // End of variables declaration//GEN-END:variables
 }
